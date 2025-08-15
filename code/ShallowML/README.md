@@ -20,5 +20,15 @@ There are three ways to process the data
 
 ## Install
 ```
-conda create -n <env> -f environment.yml
+conda create -n shallowml python=3.10 jupyterlab
+conda activate shallowml
+pip install -U pip
+pip install -U setuptools wheel
+pip install autogluon
+```
+## Use
+```
+conda activate shallowml
+jupyter lab --ip=0.0.0.0 --port=8888 --no-browser --allow-root \
+  --ServerApp.token='' --ServerApp.password=''
 ```
