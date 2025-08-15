@@ -2,6 +2,16 @@
 
 Note: this code is based on [TrafficFormer](https://github.com/IDP-code/TrafficFormer). Many thanks to the authors. We changed the python file under fine-tuning
 
+# Installation way by ourselves
+```
+conda create -n trafficformer ipykernel python=3.8
+conda activate trafficformer
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 
+--index-url https://download.pytorch.org/whl/cu118
+pip install -U scikit-learn
+pip install scapy flowcontainer pandas tqdm packaging 
+```
+
 ## Pretrain Corpus Generation
 The codes are in data_generation/pretrain_data_gen.py
 ### pretrain_dataset_generation (from pcap to burst)
