@@ -10,4 +10,5 @@
 - The data processing way of YaTC and NetMamba are same
 - For NetMamba, netFound, and YaTC, adopted the padding way that repeats the same packet up to the input limitation.
 - For TrafficFormer, used data augmentation with 5 times.
-- For Shallow ML, retreived all related fields and normalized some fields data. (TODO: optimize the code)
+- For Shallow ML, retrieve all related fields and normalized some fields data. (TODO: optimize the code)
+- For netFound, for flow-level splits, please follow the official guidelines as they rely on a third-party C++ library.
