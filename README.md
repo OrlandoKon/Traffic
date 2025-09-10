@@ -51,6 +51,7 @@ Please cite the paper published in ACM SIGCOMM 2025:
   title     = {The Sweet Danger of Sugar: Debunking Representation Learning
                for Encrypted Traffic Classification},
   booktitle = {Proceedings of the ACM SIGCOMM 2025 Conference},
+  pages     = {296--310},
   location  = {Coimbra, PT},
   series    = {ACM SIGCOMM '25}
   publisher = {Association for Computing Machinery},
