@@ -22,14 +22,14 @@ import data_preprocess
 import open_dataset_deal
 
 _category = 19 # dataset class
-dataset_dir = "/home/dauin_user/yzhao/LLM4Traffic/code/ET-BERT/datasets/pcap_encoder/TLS/" # the path to save dataset for fine-tuning
+dataset_dir = "/root/data/ISCX-VPN-2016/datasets/" # the path to save dataset for fine-tuning
 
-pcap_path = "/home/dauin_user/yzhao/LLM4Traffic/data/pcap_encoder/TLS/"
-dataset_save_path = "/home/dauin_user/yzhao/LLM4Traffic/code/ET-BERT/datasets/pcap_encoder/TLS/"
+pcap_path = "/root/data/ISCX-VPN-2016/filtered/tmp/"
+dataset_save_path = "/root/Traffic/code/ET-BERT/datasets/ISCX-VPN-2016/result/"
 task_type = ["train", "validation", "test"] # for different type dataset
 samples = [2400]
 features = ["payload"]
-dataset_level = "packet"
+dataset_level = "flow"
 
 def dataset_extract(model,task,splitcap):
     X_dataset = {}
@@ -165,7 +165,7 @@ def count_label_number(samples):
 if __name__ == '__main__':
     task = 'task'
     # pcap_path = f"{pcap_path}{task}/splitcap/"
-    pcap_path = f"{pcap_path}{task}/"
+    # pcap_path = f"{pcap_path}{task}/"
 
     open_dataset_not_pcap = 0
     
@@ -191,4 +191,4 @@ if __name__ == '__main__':
     train_model = ["pre-train"]
     ml_experiment = 0
 
-    dataset_extract(train_model, task, splitcap=False)
+    dataset_extract(train_model, task, splitcap=True)

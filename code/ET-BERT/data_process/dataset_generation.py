@@ -364,7 +364,7 @@ def generation(pcap_path, samples, features, splitcap = False, payload_length = 
     label_name_list = []
 
     session_pcap_path  = {}
-
+    print(f'Orlando Debug - pcap_path: {pcap_path}')
     for parent, dirs, files in os.walk(pcap_path):
         if label_name_list == []:
             label_name_list.extend(dirs)
@@ -393,11 +393,11 @@ def generation(pcap_path, samples, features, splitcap = False, payload_length = 
                 else:
                     session_pcap_path[dir] = pcap_path + dir
         break
-
+    
     label_id = {}
     for index in range(len(label_name_list)):
         label_id[label_name_list[index]] = index
-
+    
     r_file_record = []
     print("\nBegin to generate features.")
 

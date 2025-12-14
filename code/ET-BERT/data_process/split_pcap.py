@@ -73,7 +73,9 @@ def split_pcap_to_sessions_parallel(input_pcap, output_dir):
     ]
 
     # 使用多进程处理会话
-    with Pool(processes=cpu_count()) as pool:
+    # Orlando Change
+    with Pool(1) as pool:
+
         pool.map(process_session, args)
 
     print(f"Split complete. Total {len(sessions)} sessions saved to {output_dir}.")
