@@ -47,13 +47,13 @@ After obtaining the pre-trained model, ET-BERT could be applied to the spetic ta
 ```
 python3 fine-tuning/run_classifier_ori.py --pretrained_model_path models/pre-trained_model.bin \
                                           --vocab_path models/encryptd_vocab.txt \
-                                          --train_path datasets/ISCX-VPN-2016/train_val_split_1 \
-                                          --dev_path datasets/ISCX-VPN-2016/train_val_split_1 \
+                                          --train_path datasets/ISCX-VPN-2016/train_val_split_2 \
+                                          --dev_path datasets/ISCX-VPN-2016/train_val_split_2 \
                                           --test_path datasets/ISCX-VPN-2016/ \
                                           --epochs_num 10 --batch_size 32 --embedding word pos seg \
                                           --encoder transformer --mask fully_visible \
                                           --seq_length 128 --learning_rate 2e-5 --dataset ISCX-VPN-2016 \
-                                          --frozen --output_model_path outputs/train_val_split_1 \
+                                          --frozen --output_model_path outputs/train_val_split_2 \
 ```
 <br/>
 
