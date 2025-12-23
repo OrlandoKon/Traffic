@@ -4,7 +4,7 @@ LOG_LEVEL="info"
 OUTPUT_PATH="./results/"
 
 #Model info
-FINETUNED_PATH_MODEL="./models/pretrained“
+FINETUNED_PATH_MODEL="./"
 MODEL_NAME="T5-base"
 TOKENIZER_NAME="T5-base" #if you use a finetuned tokenizer, specify the path
 GPU=(0) #CHOOSE GPUs HERE. Elements in bash lists shall look like `(GPU1 GPU2 ...)`
@@ -28,11 +28,11 @@ PKT_REPR_DIM=768
 export GPUS_PER_NODE=1
 
 export SCRIPT=../../2.Training/classification/classification.py
-for i in 0 1 2
+for i in 1
 do
-    TRAINING_DATA="../../1.Datasets/Classification/Task3/train_ver${i}.parquet"
-    VAL_DATA="../../1.Datasets/Classification/Task3/val_ver${i}.parquet"
-    TEST_DATA="../../1.Datasets/Classification/Task3/test.parquet"
+    TRAINING_DATA="/root/Traffic/code/PCAP_encoder/1.Datasets/Classification/without_IP/vpn-app/train_val_split_${i}/train.parquet"
+    VAL_DATA="/root/Traffic/code/PCAP_encoder/1.Datasets/Classification/without_IP/vpn-app/train_val_split_${i}/val.parquet"
+    TEST_DATA="/root/Traffic/code/PCAP_encoder/1.Datasets/Classification/without_IP/vpn-app/test.parquet"
 
     EXPERIMENT="Task3__DNS__NOIP" 
     IDENTIFIER="lr${LR}_seed${SEED}_loss${LOSS}_batch24_frozen_ver${i}"
@@ -47,5 +47,5 @@ do
     --finetuned_path_model $FINETUNED_PATH_MODEL --testing_data $TEST_DATA\
     "
     
-    accelerate launch --num_processes=$GPUS_PER_NODE $SCRIPT $SCRIPT_ARGS
+    accelerate launch --num_processes=1 $SCRIPT $SCRIPT_ARGS
 done

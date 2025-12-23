@@ -1,5 +1,6 @@
 import sys  # nopep8
-
+import os
+os.environ["HF_ENDPOINT"] = "https://hf-mirror.com"
 sys.path.append("../../")  # nopep8
 from Core.functions.option_parser import get_classification_options
 from Core.classes.dataset_for_classification import Classification_Dataset

@@ -65,8 +65,9 @@ class TrafficTransformer(timm.models.vision_transformer.VisionTransformer):
         x = x[:, 1:, :]
         x = x.reshape(B, 4, 20, -1).mean(axis=1)
         x = torch.cat((cls, x), dim=1)
-
+        # print("Before fc_norm:", x.shape)
         self.fc_norm(x)
+        # print("After fc_norm:", x.shape)
 
         return x
 
@@ -88,11 +89,18 @@ class TrafficTransformer(timm.models.vision_transformer.VisionTransformer):
         
         x = x.reshape(B, 5, 21, -1)[:, :, 0, :]
         x = x.mean(dim=1)
-
+        # print("Before fc_norm:", x.shape)
         outcome = self.fc_norm(x)
+        # print("After fc_norm:", outcome.shape)
         # outcome = outcome.view(outcome.shape[0],1,-1)
 
         return outcome
+    def forward_head(self, x, pre_logits: bool = False):
+    # x is already [B, embed_dim] from forward_features
+        x = self.fc_norm(x)
+        if pre_logits:
+            return x
+        return self.head(x)
 
 
 class MaskedAutoencoder(nn.Module):

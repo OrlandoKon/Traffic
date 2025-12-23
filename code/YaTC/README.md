@@ -46,13 +46,13 @@ pip install timm==0.4.12
 ```
 python fine-tune.py --blr 2e-3 \
                     --epochs 200 \
-                    --data_path ./data/vpn-app/train_val_split_0 \
-                    --test_path ./data/vpn-service/test \
+                    --data_path /root/Traffic/flow-level-classification/vpn-app/MRF/train_val_split_0 \
+                    --test_path /root/Traffic/flow-level-classification/vpn-app/MRF/test \
                     --output_dir ./outputs \
                     -- log_dir ./logs \
-                    --nb_classes 12 \
+                    --nb_classes 16 \
                     --frozen \
-                    --dataset vpn-service
+                    --dataset vpn-app
 
 ```
 

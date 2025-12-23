@@ -8,6 +8,15 @@ from pathlib import Path
 
 import torch
 import torch.backends.cudnn as cudnn
+import sys
+
+import torch.multiprocessing as mp
+mp.set_start_method('spawn', force=True)
+import distutils.util
+# 强制恢复 distutils.version
+if not hasattr(distutils, 'version'):
+    import distutils.version
+    sys.modules['distutils.version'] = distutils.version
 from torch.utils.tensorboard import SummaryWriter
 
 import timm
@@ -101,7 +110,7 @@ def get_args_parser():
                         help='Probability of switching to cutmix when both mixup and cutmix enabled')
     parser.add_argument('--mixup_mode', type=str, default='batch',
                         help='How to apply mixup/cutmix params. Per "batch", "pair", or "elem"')
-    parser.add_argument('--finetune', default='./output_dir/pretrained-model.pth',
+    parser.add_argument('--finetune', default='/root/Traffic/code/YaTC/output_dir/pretrained-model.pth',
                         help='finetune from checkpoint')
     parser.add_argument('--data_path', default='./data/ISCXVPN2016_MFR', type=str,
                         help='dataset path')
@@ -293,7 +302,7 @@ def main(args):
     n_parameters = sum(p.numel() for p in model.parameters() if p.requires_grad)
 
     # print("Model = %s" % str(model_without_ddp))
-    print('number of params (M): %.2f' % (n_parameters / 1.e6))
+    print('number of params (M): %.2f' % (n_parameters))
 
     eff_batch_size = args.batch_size * args.accum_iter * misc.get_world_size()
 

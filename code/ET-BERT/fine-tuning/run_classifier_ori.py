@@ -88,7 +88,7 @@ def count_labels_num(path):
             line = line.strip().split("\t")
             label = int(line[columns["label"]])
             labels_set.add(label)
-    return len(labels_set)
+    return 16
 
 
 def load_or_initialize_parameters(args, model):

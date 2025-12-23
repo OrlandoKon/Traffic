@@ -26,6 +26,9 @@ pipeline/
 tool/Data-Process/embedding/
 code/comments.txt
 code/NetMamba/mamba/
+code/ET-BERT/datasets/*
+flow-level-classification
+Pretrained
 tool/
 process_data/per-flow-split/flow_classification/split_based_flow_etbert.ipynb
 
