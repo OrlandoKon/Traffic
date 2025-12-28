@@ -1,8 +1,8 @@
 
 data = [
-    {"ACC": 0.2060, "Pre": 0.2101, "Rec": 0.2075, "F1": 0.1278, "Inference time": 0.0276},
-    {"ACC": 0.2060, "Pre": 0.1797, "Rec": 0.1659, "F1": 0.1117, "Inference time": 0.0275},
-    {"ACC": 0.2563, "Pre": 0.2653, "Rec": 0.1929, "F1": 0.1452, "Inference time": 0.0294}
+    {"ACC": 0.0888, "Pre": 0.0654, "Rec": 0.0803, "F1": 0.0445, "Inference time": 1.5463},
+    {"ACC": 0.0931, "Pre": 0.0618, "Rec": 0.0826, "F1": 0.0465, "Inference time": 1.5793},
+    {"ACC": 0.0911, "Pre": 0.0833, "Rec": 0.0823, "F1": 0.0462, "Inference time": 1.5485}
 ]
 
 keys = ["ACC", "Pre", "Rec", "F1", "Inference time"]

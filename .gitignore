@@ -27,6 +27,7 @@ tool/Data-Process/embedding/
 code/comments.txt
 code/NetMamba/mamba/
 code/ET-BERT/datasets/*
+code/PCAP_encoder/*
 flow-level-classification/*
 Pretrained/*
 process_finetune_data/Data Processing/PCAPEncoder/*
