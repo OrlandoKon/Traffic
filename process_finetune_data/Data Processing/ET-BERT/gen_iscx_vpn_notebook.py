@@ -77,11 +77,38 @@ C4 = """\
 # ── Flow extraction ──────────────────────────────────────────────────────────
 
 def is_unwanted(pkt) -> bool:
+    \"\"\"Mirror ET-BERT clean_pcap filter:
+    not arp and not dns and not stun and not dhcpv6 and not icmpv6
+    and not icmp and not dhcp and not llmnr and not nbns and not ntp
+    and not igmp and frame.len > 80
+    \"\"\"
+    # ARP
     if pkt.haslayer(scapy.ARP):
         return True
+    # ICMP / IGMP (IPv4 proto 1 / 2)
+    if pkt.haslayer(IP):
+        if pkt[IP].proto in (1, 2):
+            return True
+    # ICMPv6 (IPv6 next header = 58)
+    if pkt.haslayer(IPv6) and pkt[IPv6].nh == 58:
+        return True
+    # 端口级过滤
+    UDP_BG = {
+        53,              # DNS
+        67, 68,          # DHCP v4
+        123,             # NTP
+        137,             # NBNS (NetBIOS Name Service)
+        546, 547,        # DHCPv6
+        3478, 3479,      # STUN
+        5349, 5350,      # STUNS / DTLS-STUN
+        5355,            # LLMNR
+    }
     if pkt.haslayer(UDP):
-        s, d = pkt[UDP].sport, pkt[UDP].dport
-        if s in (67, 68) or d in (67, 68):
+        if pkt[UDP].sport in UDP_BG or pkt[UDP].dport in UDP_BG:
+            return True
+    TCP_BG = {53, 3478, 3479, 5349}   # DNS-over-TCP, STUN/STUNS-over-TCP
+    if pkt.haslayer(TCP):
+        if pkt[TCP].sport in TCP_BG or pkt[TCP].dport in TCP_BG:
             return True
     return False
 
@@ -470,8 +497,9 @@ def mask_tls_payload(buf: bytearray, tls_start: int, group: int):
                 elif hs_type == 2:
                     _mask_server_hello(buf, hs_s, hs_e, group)
                 hp = hs_e
-        elif ct == 23:                                # Application Data: zero ciphertext
-            buf[pos+5:rec_end] = b'\\x00' * rec_len
+        elif ct == 23:                                # Application Data: zero ciphertext (G1/G2 only; G3 keeps it)
+            if group in (1, 2):
+                buf[pos+5:rec_end] = b'\\x00' * rec_len
         pos = rec_end
 """
 
@@ -523,15 +551,21 @@ def apply_mask(raw: bytes, group: int) -> bytes:
     if proto == 6:    # TCP
         pl_off = mask_tcp_header(buf, tr_off, group)
         if pl_off < len(buf) and _looks_like_tls(bytes(buf[pl_off:pl_off+5])):
-            mask_tls_payload(buf, pl_off, group)   # App Data bodies zeroed in-place
+            mask_tls_payload(buf, pl_off, group)   # App Data bodies zeroed in-place (G1/G2)
             return bytes(buf[ip_off:])             # include TLS structure
-        return bytes(buf[ip_off:pl_off])           # non-TLS: headers only
+        if group == 3:
+            return bytes(buf[ip_off:])             # G3: keep full payload
+        return bytes(buf[ip_off:pl_off])           # G1/G2 non-TLS: headers only
 
     elif proto == 17: # UDP
         pl_off = mask_udp_header(buf, tr_off, group)
-        return bytes(buf[ip_off:pl_off])           # always headers only
+        if group == 3:
+            return bytes(buf[ip_off:])             # G3: keep full payload
+        return bytes(buf[ip_off:pl_off])           # G1/G2: headers only
 
-    return bytes(buf[ip_off:tr_off])               # other proto: IP header only
+    if group == 3:
+        return bytes(buf[ip_off:])                 # G3 other proto: keep full payload
+    return bytes(buf[ip_off:tr_off])               # G1/G2 other proto: IP header only
 """
 
 C10 = """\

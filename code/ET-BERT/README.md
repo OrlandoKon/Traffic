@@ -60,30 +60,16 @@ python3 fine-tuning/run_classifier_ori.py --pretrained_model_path models/pre-tra
 python3 fine-tuning/run_classifier_ori.py \
     --pretrained_model_path models/pre-trained_model.bin \
     --vocab_path models/encryptd_vocab.txt \
-    --train_path datasets/ISCX-VPN-2016/group0/app/flow/split_0 \
-    --dev_path datasets/ISCX-VPN-2016/group0/app/flow/split_0 \
-    --test_path datasets/ISCX-VPN-2016/group0/app/flow/split_0 \
+    --train_path datasets/ISCX-VPN-2016/group_3/split_0 \
+    --dev_path datasets/ISCX-VPN-2016/group_3/split_0 \
+    --test_path datasets/ISCX-VPN-2016/group_3/split_0 \
     --epochs_num 10 --batch_size 32 \
     --embedding word pos seg \
     --encoder transformer --mask fully_visible \
     --seq_length 512 --learning_rate 6e-5 \
     --dropout 0.5 \
     --dataset ISCX-VPN-2016 \
-    --output_model_path outputs/ISCX-VPN-2016/group0/split_0
-
-python3 fine-tuning/run_classifier_ori.py \
-    --pretrained_model_path models/pre-trained_model.bin \
-    --vocab_path models/encryptd_vocab.txt \
-    --train_path datasets/ISCX-VPN-2016/group_0/split_0 \
-    --dev_path datasets/ISCX-VPN-2016/group_0/split_0 \
-    --test_path datasets/ISCX-VPN-2016/group_0/split_0 \
-    --epochs_num 10 --batch_size 32 \
-    --embedding word pos seg \
-    --encoder transformer --mask fully_visible \
-    --seq_length 512 --learning_rate 6e-5 \
-    --dropout 0.5 \
-    --dataset ISCX-VPN-2016 \
-    --output_model_path outputs/ISCX-VPN-2016/group_0/split_0
+    --output_model_path outputs/ISCX-VPN-2016/group_3/split_0
 ```
 <br/>
 

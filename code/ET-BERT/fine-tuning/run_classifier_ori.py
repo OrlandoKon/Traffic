@@ -251,7 +251,7 @@ def evaluate(args, dataset, print_confusion_matrix=False):
     batch_size = args.batch_size
 
     correct = 0
-    # Confusion matrix.
+    # Confusion matrix: confusion[pred, gold].
     confusion = torch.zeros(args.labels_num, args.labels_num, dtype=torch.long)
 
     args.model.eval()
@@ -272,10 +272,6 @@ def evaluate(args, dataset, print_confusion_matrix=False):
             confusion[pred[j], gold[j]] += 1
         correct += torch.sum(pred == gold).item()
 
-        if print_confusion_matrix:
-            print("Confusion Matrix:")
-            print(confusion)
-
     precision = confusion.diag() / (confusion.sum(1) + 1e-9)
     recall = confusion.diag() / (confusion.sum(0) + 1e-9)
     f1 = 2 * precision * recall / (precision + recall + 1e-9)
@@ -286,6 +282,21 @@ def evaluate(args, dataset, print_confusion_matrix=False):
     print("Recall: ", recall.mean().item())
     print("F1 Score: {:.4f}".format(f1_score))
     print("Inference time: {:.4f}".format(inference_time))
+
+    if print_confusion_matrix:
+        n = args.labels_num
+        support = confusion.sum(0).tolist()
+        print("\nPer-class metrics:")
+        print("{:>6} {:>10} {:>10} {:>10} {:>10}".format("class", "precision", "recall", "f1", "support"))
+        for c in range(n):
+            print("{:>6d} {:>10.4f} {:>10.4f} {:>10.4f} {:>10d}".format(
+                c, precision[c].item(), recall[c].item(), f1[c].item(), support[c]))
+        print("\nConfusion Matrix (rows=pred, cols=gold):")
+        header = "       " + "".join("{:>6d}".format(c) for c in range(n))
+        print(header)
+        for r in range(n):
+            row = "{:>5d} |".format(r) + "".join("{:>6d}".format(confusion[r, c].item()) for c in range(n))
+            print(row)
 
     return correct / len(dataset), precision.mean().item(), recall.mean().item(), f1_score, inference_time
 
@@ -415,7 +426,7 @@ def main():
         print("Test set evaluation.")
 
         model.load_state_dict(torch.load(f"{args.output_model_path}/finetuned_{args.dataset}_{args.learning_rate}_{args.frozen}_{args.train_path[-1]}.pth"))
-        test_result = evaluate(args, read_dataset(args, f"{args.test_path}/test.tsv"), False)
+        test_result = evaluate(args, read_dataset(args, f"{args.test_path}/test.tsv"), True)
 
         test_results = {
             "epoch": "test", 

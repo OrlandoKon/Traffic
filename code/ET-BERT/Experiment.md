@@ -222,6 +222,61 @@
 - 共 16 类、训练集仅 ~4655 条样本，平均每类不足 300 条，少数类不足 60 条。
 - 在 header-only 设定下（Group 1/2），少量样本难以支撑细粒度区分，方差极大（F1 std 0.06–0.10）。
 
+### 案例分析：torrent 类从 F1=0.91 到 0.00 的崩盘揭示了什么
+
+torrent 类是 Group 0 → Group 1 跨度最大的样本（F1 0.91 → 0.00，所有真样本中 90% 被错判为 scp）。直接抽取该类的 raw bytes 排查后，能定位到 Group 0 实际依赖的是什么信号，进而回答"Group 0 的高分有多少来自捷径/无关特征"这一核心问题。
+
+**直觉假设是错的：ISCX 的 BitTorrent payload 看不见**
+
+最朴素的解释是 BitTorrent 协议握手包里那串固定的 `0x13 + "BitTorrent protocol"`（共 20 字节 magic）让 torrent 类很容易识别。但实测训练集里 **0% 的 torrent 流包含该 magic**——`vpn_bittorrent.pcap` 是 VPN 隧道内的流量，BitTorrent 协议字节被 VPN 加密了，模型根本看不到。
+
+**Group 0 真正学到的是"环境指纹"**
+
+抽取 torrent / scp / facebook 三类样本的前 40 字节对比后发现，**绝大多数样本是 TCP SYN 包**，且字节高度一致：
+
+```
+所有类的 SYN 包都长这样：
+  byte  8:    0xa0   (data offset = 10, 表示 40B 头 + 20B options)
+  byte  9:    0x02   (flags = SYN)
+  bytes 10-11: 72 10 (window = 29200，Linux 默认初始 window)
+  bytes 16-19: 02 04 05 b4 (MSS = 1460)
+  bytes 20-21: 04 02 (SACK Permitted)
+  bytes 22-23: 08 0a (Timestamp option)
+  bytes 24-31: 8B 随机 TSval / TSecr
+  bytes 32-35: 01 03 03 07 (NOP + Window Scale = 7)
+```
+
+torrent、scp、facebook 客户端的 SYN 包**字段级几乎一样**——都是同一台 Linux 测试机在不同时刻发起的标准 SYN。能让模型分开它们的，实际是：
+
+1. **TCP Timestamp Option 的 TSval 字段**：32-bit 自机器启动以来的 tick 计数。同一段时间内连续抓的同类流，TSval 落在相近区间；不同 pcap 文件 TSval 区间差异大 → 模型把它当成 pcap-level 指纹
+2. **加密 payload 的包长直方图**：VPN 隧道把 BitTorrent / SCP / 网页流量都加密成"看似随机"的字节，但**填充长度、chunk 大小、TCP segment 分布**因协议而异
+3. **TCP seq/ack 递增节奏**：bulk transfer 的 ack 频率和 chunk 切分节奏在 BT 和 scp 间有差异
+4. **TCP options 顺序与 MSS 值的微小差异**：不同 VPN 客户端配置可能产生 MSS=1460/1452/1380 等差异
+
+这些信号**多数对应表 1 中的"捷径/无关特征"列**：
+- TSval ∈ TCP Options → 当前分类为"捷径/无关特征"
+- Window → "捷径"
+- Sequence/Ack → "捷径/无关特征"
+- 加密 payload 字节直方图 → 不在表 1 字段级语义内，但本质属于"环境侧信道"
+
+**Group 1 严格按照"仅可用特征"裁剪后**：TSval/Window/Seq/Ack/Options 全部置零，payload 也置零（仅留 TLS Record Header 的 Content Type + Length），剩下能用的只有 IP 头里的 IHL/ToS/Total Length/DF/Protocol + TCP RST/SYN/FIN/PSH flags + UDP Length。torrent 的 SYN 和 scp 的 SYN **物理上不可区分**——两者都是 Linux 主机发起的 TCP bulk transfer，IP 头和 flags 完全一样。所以 torrent F1 跌到 0、90% 被判作 scp 是必然的。
+
+**这给主实验提供了一个量化结论**
+
+从 torrent 这单一类来看，**Group 0 中将近 91 个百分点的 F1 是由"捷径/无关特征"形成的环境指纹支撑的**——一旦把这些字段按"仅可用特征"规范掩码，分类能力归零。这与 Group 0 → Group 1 整体 F1 从 0.58 跌到 0.28（−0.30）的幅度一致。
+
+进一步推论：**ET-BERT 论文报告的 F1=0.7306 也存在同样的环境指纹依赖**，因为它们的预处理只剥 IP 头和端口，并未对 TSval、Window、Options 这些字段做语义级掩码。换句话说，论文 baseline 的高分**部分来自捕获环境而非应用本身**。这一发现支持本实验设计的初衷：仅当字段级语义掩码到位时，分类指标才反映"真正可用特征"下的上限。
+
+### Group 2 验证了 TSval = 主要环境指纹这一假说
+
+Group 2 在 Group 1 基础上额外保留了 TCP **Seq/Ack/Options**（其中 Options 包含 TSval）和部分 TLS 扩展。**torrent 类 F1 从 Group 1 的 0.00 直接跳到 0.79**，这正好对应"TCP Options 一加回来，TSval 就恢复了"的预期，与前一节关于环境指纹的分析完全吻合。
+
+宏观对比也符合预期排序：Group 0 (0.59) > Group 2 (0.35) > Group 1 (0.28)。Group 2 比 Group 1 +0.06 F1，主要由 torrent、netflix、youtube、vimeo 这些"依赖环境指纹"的类贡献。
+
+但 Group 2 并不是单调更好：voipbuster (0.47→0.06)、ftp (0.64→0.43)、skype (0.59→0.40) 反而比 Group 1 退步。原因是这些类**本身没有独特字段**，多保留的 Seq/Ack 和 TLS 扩展在它们之间高度相似，模型陷入新的混淆（混淆矩阵中 ftp 和 skype 都变成"垃圾桶"，吸收大量其他类的错判）。
+
+→ **多保留字段不等于更好，关键看保留的字段是否对该类有判别力**。这也支持表 1 把字段细分为五类的设计：不同类对不同字段的依赖差异很大，整体掩码策略对每一类的影响不一致。
+
 ### 待跟进项
 
 1. 核对类别集合，确认是 16 还是 17 类，确认与论文一致

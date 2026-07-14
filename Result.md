@@ -15,3 +15,10 @@
 | K1  | 0.0931 | 0.0618  | 0.0826 | 0.0465 | 1.5793
 | K2  | 0.0911 | 0.0833  | 0.0823 | 0.0462 | 1.5485
 | Average | 0.0910 | 0.0702 | 0.0817 | 0.0457 | 1.5580 |
+
+### ITC-Net-Blend-60 OOD
+| Fold | Held-out scenario | ACC. | Pre. | Rec. | F1. | Inference time |
+| ---- | ---- | ---- | ---- | ---- | ---- | ---- |
+| E | Scenario_E | 0.1871 | 0.2189 | 0.2044 | 0.1909 | 2.7636 |
+
+Preprocess: TraffiCOGS-style 5-packet flow input, 53 common classes, IP addresses/ports/SNI removed. Split sizes: train 84314, val 9354, test 18130.
