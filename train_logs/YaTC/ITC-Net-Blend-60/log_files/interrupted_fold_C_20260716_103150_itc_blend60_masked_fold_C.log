@@ -1,0 +1,553 @@
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/util/misc.py:248: FutureWarning: `torch.cuda.amp.GradScaler(args...)` is deprecated. Please use `torch.amp.GradScaler('cuda', args...)` instead.
+  self._scaler = torch.cuda.amp.GradScaler()
+job dir: /root/Repository/PcapEncoder/code/YaTC
+Namespace(batch_size=64,
+epochs=200,
+accum_iter=1,
+model='TraFormer_YaTC',
+input_size=40,
+drop_path=0.1,
+clip_grad=None,
+weight_decay=0.05,
+lr=None,
+blr=0.002,
+layer_decay=0.75,
+min_lr=1e-06,
+warmup_epochs=20,
+color_jitter=None,
+aa='rand-m9-mstd0.5-inc1',
+smoothing=0.1,
+reprob=0.25,
+remode='pixel',
+recount=1,
+resplit=False,
+mixup=0,
+cutmix=0,
+cutmix_minmax=None,
+mixup_prob=1.0,
+mixup_switch_prob=0.5,
+mixup_mode='batch',
+finetune='',
+data_path='/root/autodl-tmp/dataset/ITC-Net-Blend-60-yatc-masked/fold_C/train_val_split_0',
+nb_classes=53,
+output_dir='./outputs/itc_blend60_masked_fold_C',
+log_dir='./logs/itc_blend60_masked_fold_C',
+device='cuda',
+seed=0,
+resume='',
+start_epoch=0,
+eval=False,
+dist_eval=False,
+num_workers=10,
+pin_mem=True,
+world_size=1,
+local_rank=-1,
+dist_on_itp=False,
+dist_url='env://',
+frozen=False,
+test_path='/root/autodl-tmp/dataset/ITC-Net-Blend-60-yatc-masked/fold_C/test',
+dataset='itc_blend60_masked_fold_C',
+distributed=False)
+number of params (M): 1868213.00
+base lr: 2.00e-03
+actual lr: 5.00e-04
+accumulate grad iterations: 1
+effective batch size: 64
+criterion = LabelSmoothingCrossEntropy()
+Start training for 200 epochs
+log_dir: ./logs/itc_blend60_masked_fold_C
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/engine.py:127: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch: [0]  [   0/1236]  lr: 0.000000  loss: 3.9562 (3.9562)  eta: 10:57:24  time: 31.9128  data: 31.1453  max mem: 1059
+Epoch: [0]  [  20/1236]  lr: 0.000000  loss: 4.0045 (4.0088)  eta: 0:31:32  time: 0.0383  data: 0.0002  max mem: 1074
+Epoch: [0]  [  40/1236]  lr: 0.000001  loss: 4.0228 (4.0182)  eta: 0:16:14  time: 0.0365  data: 0.0001  max mem: 1074
+Epoch: [0]  [  60/1236]  lr: 0.000001  loss: 3.9984 (4.0174)  eta: 0:10:59  time: 0.0393  data: 0.0001  max mem: 1074
+Epoch: [0]  [  80/1236]  lr: 0.000002  loss: 3.9978 (4.0137)  eta: 0:08:19  time: 0.0413  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 100/1236]  lr: 0.000002  loss: 4.0041 (4.0125)  eta: 0:06:42  time: 0.0376  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 120/1236]  lr: 0.000002  loss: 4.0021 (4.0104)  eta: 0:05:37  time: 0.0387  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 140/1236]  lr: 0.000003  loss: 3.9800 (4.0057)  eta: 0:04:49  time: 0.0376  data: 0.0003  max mem: 1074
+Epoch: [0]  [ 160/1236]  lr: 0.000003  loss: 3.9581 (4.0005)  eta: 0:04:14  time: 0.0401  data: 0.0003  max mem: 1074
+Epoch: [0]  [ 180/1236]  lr: 0.000004  loss: 3.9687 (3.9969)  eta: 0:03:46  time: 0.0394  data: 0.0003  max mem: 1074
+Epoch: [0]  [ 200/1236]  lr: 0.000004  loss: 3.9636 (3.9936)  eta: 0:03:24  time: 0.0377  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 220/1236]  lr: 0.000004  loss: 3.9392 (3.9899)  eta: 0:03:06  time: 0.0444  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 240/1236]  lr: 0.000005  loss: 3.9608 (3.9874)  eta: 0:02:50  time: 0.0386  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 260/1236]  lr: 0.000005  loss: 3.9603 (3.9852)  eta: 0:02:36  time: 0.0335  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 280/1236]  lr: 0.000006  loss: 3.9463 (3.9826)  eta: 0:02:25  time: 0.0431  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 300/1236]  lr: 0.000006  loss: 3.9425 (3.9804)  eta: 0:02:15  time: 0.0360  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 320/1236]  lr: 0.000006  loss: 3.9483 (3.9786)  eta: 0:02:06  time: 0.0441  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 340/1236]  lr: 0.000007  loss: 3.9455 (3.9769)  eta: 0:01:58  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 360/1236]  lr: 0.000007  loss: 3.9593 (3.9753)  eta: 0:01:51  time: 0.0408  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 380/1236]  lr: 0.000008  loss: 3.9370 (3.9737)  eta: 0:01:45  time: 0.0397  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 400/1236]  lr: 0.000008  loss: 3.9351 (3.9720)  eta: 0:01:39  time: 0.0469  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 420/1236]  lr: 0.000008  loss: 3.9452 (3.9707)  eta: 0:01:33  time: 0.0361  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 440/1236]  lr: 0.000009  loss: 3.9393 (3.9694)  eta: 0:01:29  time: 0.0413  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 460/1236]  lr: 0.000009  loss: 3.9406 (3.9683)  eta: 0:01:24  time: 0.0401  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 480/1236]  lr: 0.000010  loss: 3.9371 (3.9672)  eta: 0:01:20  time: 0.0398  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 500/1236]  lr: 0.000010  loss: 3.9440 (3.9664)  eta: 0:01:15  time: 0.0369  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 520/1236]  lr: 0.000011  loss: 3.9455 (3.9654)  eta: 0:01:12  time: 0.0418  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 540/1236]  lr: 0.000011  loss: 3.9533 (3.9650)  eta: 0:01:08  time: 0.0368  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 560/1236]  lr: 0.000011  loss: 3.9401 (3.9642)  eta: 0:01:05  time: 0.0388  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 580/1236]  lr: 0.000012  loss: 3.9272 (3.9630)  eta: 0:01:01  time: 0.0430  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 600/1236]  lr: 0.000012  loss: 3.9292 (3.9621)  eta: 0:00:58  time: 0.0421  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 620/1236]  lr: 0.000013  loss: 3.9362 (3.9612)  eta: 0:00:56  time: 0.0404  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 640/1236]  lr: 0.000013  loss: 3.9277 (3.9603)  eta: 0:00:53  time: 0.0417  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 660/1236]  lr: 0.000013  loss: 3.9322 (3.9593)  eta: 0:00:50  time: 0.0434  data: 0.0004  max mem: 1074
+Epoch: [0]  [ 680/1236]  lr: 0.000014  loss: 3.9413 (3.9587)  eta: 0:00:48  time: 0.0403  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 700/1236]  lr: 0.000014  loss: 3.9457 (3.9583)  eta: 0:00:45  time: 0.0382  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 720/1236]  lr: 0.000015  loss: 3.9375 (3.9578)  eta: 0:00:43  time: 0.0440  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 740/1236]  lr: 0.000015  loss: 3.9216 (3.9570)  eta: 0:00:41  time: 0.0353  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 760/1236]  lr: 0.000015  loss: 3.9218 (3.9563)  eta: 0:00:38  time: 0.0392  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 780/1236]  lr: 0.000016  loss: 3.9300 (3.9556)  eta: 0:00:36  time: 0.0336  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 800/1236]  lr: 0.000016  loss: 3.9328 (3.9550)  eta: 0:00:34  time: 0.0388  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 820/1236]  lr: 0.000017  loss: 3.9254 (3.9545)  eta: 0:00:32  time: 0.0383  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 840/1236]  lr: 0.000017  loss: 3.9333 (3.9541)  eta: 0:00:30  time: 0.0369  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 860/1236]  lr: 0.000017  loss: 3.9218 (3.9535)  eta: 0:00:28  time: 0.0350  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 880/1236]  lr: 0.000018  loss: 3.9216 (3.9529)  eta: 0:00:26  time: 0.0363  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 900/1236]  lr: 0.000018  loss: 3.9143 (3.9524)  eta: 0:00:25  time: 0.0361  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 920/1236]  lr: 0.000019  loss: 3.9108 (3.9515)  eta: 0:00:23  time: 0.0373  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 940/1236]  lr: 0.000019  loss: 3.9249 (3.9510)  eta: 0:00:21  time: 0.0479  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 960/1236]  lr: 0.000019  loss: 3.9357 (3.9506)  eta: 0:00:20  time: 0.0401  data: 0.0001  max mem: 1074
+Epoch: [0]  [ 980/1236]  lr: 0.000020  loss: 3.9241 (3.9501)  eta: 0:00:18  time: 0.0406  data: 0.0001  max mem: 1074
+Epoch: [0]  [1000/1236]  lr: 0.000020  loss: 3.9256 (3.9496)  eta: 0:00:16  time: 0.0371  data: 0.0001  max mem: 1074
+Epoch: [0]  [1020/1236]  lr: 0.000021  loss: 3.9433 (3.9494)  eta: 0:00:15  time: 0.0420  data: 0.0001  max mem: 1074
+Epoch: [0]  [1040/1236]  lr: 0.000021  loss: 3.9143 (3.9488)  eta: 0:00:13  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [0]  [1060/1236]  lr: 0.000021  loss: 3.9409 (3.9486)  eta: 0:00:12  time: 0.0371  data: 0.0001  max mem: 1074
+Epoch: [0]  [1080/1236]  lr: 0.000022  loss: 3.9294 (3.9483)  eta: 0:00:10  time: 0.0426  data: 0.0001  max mem: 1074
+Epoch: [0]  [1100/1236]  lr: 0.000022  loss: 3.9182 (3.9479)  eta: 0:00:09  time: 0.0434  data: 0.0001  max mem: 1074
+Epoch: [0]  [1120/1236]  lr: 0.000023  loss: 3.9318 (3.9476)  eta: 0:00:07  time: 0.0383  data: 0.0001  max mem: 1074
+Epoch: [0]  [1140/1236]  lr: 0.000023  loss: 3.9441 (3.9474)  eta: 0:00:06  time: 0.0456  data: 0.0001  max mem: 1074
+Epoch: [0]  [1160/1236]  lr: 0.000023  loss: 3.9153 (3.9468)  eta: 0:00:05  time: 0.0387  data: 0.0001  max mem: 1074
+Epoch: [0]  [1180/1236]  lr: 0.000024  loss: 3.9179 (3.9463)  eta: 0:00:03  time: 0.0415  data: 0.0001  max mem: 1074
+Epoch: [0]  [1200/1236]  lr: 0.000024  loss: 3.9435 (3.9462)  eta: 0:00:02  time: 0.0397  data: 0.0001  max mem: 1074
+Epoch: [0]  [1220/1236]  lr: 0.000025  loss: 3.9325 (3.9459)  eta: 0:00:01  time: 0.0395  data: 0.0003  max mem: 1074
+Epoch: [0]  [1235/1236]  lr: 0.000025  loss: 3.9354 (3.9457)  eta: 0:00:00  time: 0.0420  data: 0.0001  max mem: 1074
+Epoch: [0] Total time: 0:01:21 (0.0663 s / it)
+Averaged stats: lr: 0.000025  loss: 3.9354 (3.9457)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/engine.py:197: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Val:  [  0/137]  loss: 4.0170 (4.0170)  acc1: 0.0000 (0.0000)  acc5: 0.0000 (0.0000)  eta: 1:09:30  time: 30.4392  data: 30.3746  max mem: 1074
+Val:  [ 10/137]  loss: 3.8267 (3.8819)  acc1: 0.0000 (0.0355)  acc5: 0.0000 (0.0000)  eta: 0:05:52  time: 2.7751  data: 2.7614  max mem: 1074
+Val:  [ 20/137]  loss: 3.7564 (3.8215)  acc1: 0.0000 (0.0275)  acc5: 0.0000 (0.0000)  eta: 0:02:50  time: 0.0095  data: 0.0001  max mem: 1074
+Val:  [ 30/137]  loss: 3.7683 (3.8429)  acc1: 0.0000 (0.0207)  acc5: 0.0000 (0.0000)  eta: 0:01:46  time: 0.0097  data: 0.0001  max mem: 1074
+Val:  [ 40/137]  loss: 3.9760 (3.9016)  acc1: 0.0000 (0.0156)  acc5: 0.0000 (0.0000)  eta: 0:01:12  time: 0.0089  data: 0.0001  max mem: 1074
+Val:  [ 50/137]  loss: 3.9677 (3.8940)  acc1: 0.0000 (0.0141)  acc5: 0.0000 (0.0000)  eta: 0:00:52  time: 0.0092  data: 0.0001  max mem: 1074
+Val:  [ 60/137]  loss: 3.9235 (3.9025)  acc1: 0.0000 (0.0118)  acc5: 0.0000 (0.0000)  eta: 0:00:39  time: 0.0092  data: 0.0001  max mem: 1074
+Val:  [ 70/137]  loss: 3.9716 (3.9189)  acc1: 0.0000 (0.0114)  acc5: 0.0000 (0.0000)  eta: 0:00:29  time: 0.0094  data: 0.0001  max mem: 1074
+Val:  [ 80/137]  loss: 3.7986 (3.9026)  acc1: 0.0000 (0.0185)  acc5: 0.0000 (0.0000)  eta: 0:00:21  time: 0.0096  data: 0.0001  max mem: 1074
+Val:  [ 90/137]  loss: 3.7841 (3.9102)  acc1: 0.0000 (0.0426)  acc5: 0.0000 (0.0000)  eta: 0:00:16  time: 0.0092  data: 0.0001  max mem: 1074
+Val:  [100/137]  loss: 3.8338 (3.9082)  acc1: 0.0000 (0.0384)  acc5: 0.0000 (0.0000)  eta: 0:00:11  time: 0.0091  data: 0.0001  max mem: 1074
+Val:  [110/137]  loss: 3.8029 (3.8961)  acc1: 0.0000 (0.0362)  acc5: 0.0000 (0.0000)  eta: 0:00:07  time: 0.0099  data: 0.0001  max mem: 1074
+Val:  [120/137]  loss: 3.8066 (3.8971)  acc1: 0.0000 (0.0332)  acc5: 0.0000 (0.0000)  eta: 0:00:04  time: 0.0096  data: 0.0001  max mem: 1074
+Val:  [130/137]  loss: 3.9504 (3.9044)  acc1: 0.0000 (0.0307)  acc5: 0.0000 (0.0000)  eta: 0:00:01  time: 0.0086  data: 0.0001  max mem: 1074
+Val:  [136/137]  loss: 3.9809 (3.9075)  acc1: 0.0000 (0.0389)  acc5: 0.0000 (0.0000)  eta: 0:00:00  time: 0.0093  data: 0.0001  max mem: 1074
+Val: Total time: 0:00:32 (0.2383 s / it)
+* Acc@1 0.0389 Acc@5 0.0000 loss 3.9075
+* Pre 0.0145 Rec 0.0339 F1 0.0125
+Accuracy of the network on the 8763 test images: 0.0389
+F1 of the network on the 8763 test images: 0.0125
+Max Accuracy: 0.0389
+Max F1: 0.0125
+log_dir: ./logs/itc_blend60_masked_fold_C
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/engine.py:127: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch: [1]  [   0/1236]  lr: 0.000025  loss: 3.9474 (3.9474)  eta: 10:42:35  time: 31.1941  data: 31.1432  max mem: 1074
+Epoch: [1]  [  20/1236]  lr: 0.000025  loss: 3.9340 (3.9333)  eta: 0:30:49  time: 0.0370  data: 0.0001  max mem: 1074
+Epoch: [1]  [  40/1236]  lr: 0.000026  loss: 3.9104 (3.9241)  eta: 0:16:01  time: 0.0509  data: 0.0001  max mem: 1074
+Epoch: [1]  [  60/1236]  lr: 0.000026  loss: 3.9208 (3.9221)  eta: 0:10:51  time: 0.0430  data: 0.0001  max mem: 1074
+Epoch: [1]  [  80/1236]  lr: 0.000027  loss: 3.9287 (3.9230)  eta: 0:08:12  time: 0.0352  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 100/1236]  lr: 0.000027  loss: 3.9088 (3.9201)  eta: 0:06:36  time: 0.0382  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 120/1236]  lr: 0.000027  loss: 3.9083 (3.9191)  eta: 0:05:32  time: 0.0374  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 140/1236]  lr: 0.000028  loss: 3.9211 (3.9182)  eta: 0:04:47  time: 0.0460  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 160/1236]  lr: 0.000028  loss: 3.9179 (3.9179)  eta: 0:04:12  time: 0.0406  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 180/1236]  lr: 0.000029  loss: 3.9131 (3.9172)  eta: 0:03:44  time: 0.0392  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 200/1236]  lr: 0.000029  loss: 3.9191 (3.9172)  eta: 0:03:22  time: 0.0398  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 220/1236]  lr: 0.000029  loss: 3.8996 (3.9164)  eta: 0:03:04  time: 0.0371  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 240/1236]  lr: 0.000030  loss: 3.8964 (3.9148)  eta: 0:02:49  time: 0.0416  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 260/1236]  lr: 0.000030  loss: 3.9223 (3.9151)  eta: 0:02:36  time: 0.0415  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 280/1236]  lr: 0.000031  loss: 3.8975 (3.9142)  eta: 0:02:24  time: 0.0413  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 300/1236]  lr: 0.000031  loss: 3.8940 (3.9129)  eta: 0:02:14  time: 0.0366  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 320/1236]  lr: 0.000031  loss: 3.9021 (3.9120)  eta: 0:02:05  time: 0.0393  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 340/1236]  lr: 0.000032  loss: 3.8951 (3.9109)  eta: 0:01:58  time: 0.0417  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 360/1236]  lr: 0.000032  loss: 3.8846 (3.9093)  eta: 0:01:50  time: 0.0395  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 380/1236]  lr: 0.000033  loss: 3.9088 (3.9093)  eta: 0:01:44  time: 0.0391  data: 0.0003  max mem: 1074
+Epoch: [1]  [ 400/1236]  lr: 0.000033  loss: 3.8963 (3.9086)  eta: 0:01:38  time: 0.0406  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 420/1236]  lr: 0.000033  loss: 3.8925 (3.9077)  eta: 0:01:33  time: 0.0408  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 440/1236]  lr: 0.000034  loss: 3.8899 (3.9071)  eta: 0:01:28  time: 0.0378  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 460/1236]  lr: 0.000034  loss: 3.8815 (3.9062)  eta: 0:01:23  time: 0.0374  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 480/1236]  lr: 0.000035  loss: 3.8855 (3.9054)  eta: 0:01:19  time: 0.0370  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 500/1236]  lr: 0.000035  loss: 3.8446 (3.9036)  eta: 0:01:15  time: 0.0417  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 520/1236]  lr: 0.000036  loss: 3.8740 (3.9027)  eta: 0:01:11  time: 0.0398  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 540/1236]  lr: 0.000036  loss: 3.8780 (3.9017)  eta: 0:01:07  time: 0.0417  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 560/1236]  lr: 0.000036  loss: 3.8601 (3.9007)  eta: 0:01:04  time: 0.0396  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 580/1236]  lr: 0.000037  loss: 3.8708 (3.8994)  eta: 0:01:01  time: 0.0373  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 600/1236]  lr: 0.000037  loss: 3.8663 (3.8983)  eta: 0:00:58  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 620/1236]  lr: 0.000038  loss: 3.8670 (3.8973)  eta: 0:00:55  time: 0.0429  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 640/1236]  lr: 0.000038  loss: 3.8484 (3.8960)  eta: 0:00:52  time: 0.0396  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 660/1236]  lr: 0.000038  loss: 3.8521 (3.8951)  eta: 0:00:50  time: 0.0418  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 680/1236]  lr: 0.000039  loss: 3.8758 (3.8942)  eta: 0:00:47  time: 0.0403  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 700/1236]  lr: 0.000039  loss: 3.8331 (3.8925)  eta: 0:00:45  time: 0.0418  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 720/1236]  lr: 0.000040  loss: 3.8438 (3.8911)  eta: 0:00:42  time: 0.0397  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 740/1236]  lr: 0.000040  loss: 3.8483 (3.8900)  eta: 0:00:40  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 760/1236]  lr: 0.000040  loss: 3.8133 (3.8884)  eta: 0:00:38  time: 0.0405  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 780/1236]  lr: 0.000041  loss: 3.8640 (3.8874)  eta: 0:00:36  time: 0.0412  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 800/1236]  lr: 0.000041  loss: 3.8178 (3.8861)  eta: 0:00:34  time: 0.0376  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 820/1236]  lr: 0.000042  loss: 3.8274 (3.8847)  eta: 0:00:32  time: 0.0440  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 840/1236]  lr: 0.000042  loss: 3.8420 (3.8837)  eta: 0:00:30  time: 0.0399  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 860/1236]  lr: 0.000042  loss: 3.8354 (3.8829)  eta: 0:00:28  time: 0.0367  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 880/1236]  lr: 0.000043  loss: 3.8114 (3.8814)  eta: 0:00:26  time: 0.0383  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 900/1236]  lr: 0.000043  loss: 3.8163 (3.8801)  eta: 0:00:25  time: 0.0413  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 920/1236]  lr: 0.000044  loss: 3.8102 (3.8787)  eta: 0:00:23  time: 0.0490  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 940/1236]  lr: 0.000044  loss: 3.8086 (3.8773)  eta: 0:00:21  time: 0.0481  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 960/1236]  lr: 0.000044  loss: 3.8221 (3.8764)  eta: 0:00:20  time: 0.0406  data: 0.0001  max mem: 1074
+Epoch: [1]  [ 980/1236]  lr: 0.000045  loss: 3.8211 (3.8751)  eta: 0:00:18  time: 0.0400  data: 0.0001  max mem: 1074
+Epoch: [1]  [1000/1236]  lr: 0.000045  loss: 3.8093 (3.8740)  eta: 0:00:16  time: 0.0374  data: 0.0001  max mem: 1074
+Epoch: [1]  [1020/1236]  lr: 0.000046  loss: 3.7995 (3.8723)  eta: 0:00:15  time: 0.0416  data: 0.0001  max mem: 1074
+Epoch: [1]  [1040/1236]  lr: 0.000046  loss: 3.7802 (3.8705)  eta: 0:00:13  time: 0.0384  data: 0.0001  max mem: 1074
+Epoch: [1]  [1060/1236]  lr: 0.000046  loss: 3.7932 (3.8691)  eta: 0:00:12  time: 0.0386  data: 0.0001  max mem: 1074
+Epoch: [1]  [1080/1236]  lr: 0.000047  loss: 3.8297 (3.8681)  eta: 0:00:10  time: 0.0408  data: 0.0001  max mem: 1074
+Epoch: [1]  [1100/1236]  lr: 0.000047  loss: 3.7643 (3.8666)  eta: 0:00:09  time: 0.0377  data: 0.0001  max mem: 1074
+Epoch: [1]  [1120/1236]  lr: 0.000048  loss: 3.7901 (3.8657)  eta: 0:00:07  time: 0.0373  data: 0.0001  max mem: 1074
+Epoch: [1]  [1140/1236]  lr: 0.000048  loss: 3.7779 (3.8643)  eta: 0:00:06  time: 0.0387  data: 0.0001  max mem: 1074
+Epoch: [1]  [1160/1236]  lr: 0.000048  loss: 3.7937 (3.8630)  eta: 0:00:05  time: 0.0388  data: 0.0001  max mem: 1074
+Epoch: [1]  [1180/1236]  lr: 0.000049  loss: 3.7591 (3.8615)  eta: 0:00:03  time: 0.0386  data: 0.0001  max mem: 1074
+Epoch: [1]  [1200/1236]  lr: 0.000049  loss: 3.8119 (3.8605)  eta: 0:00:02  time: 0.0362  data: 0.0001  max mem: 1074
+Epoch: [1]  [1220/1236]  lr: 0.000050  loss: 3.7698 (3.8591)  eta: 0:00:01  time: 0.0376  data: 0.0002  max mem: 1074
+Epoch: [1]  [1235/1236]  lr: 0.000050  loss: 3.7780 (3.8582)  eta: 0:00:00  time: 0.0358  data: 0.0000  max mem: 1074
+Epoch: [1] Total time: 0:01:21 (0.0660 s / it)
+Averaged stats: lr: 0.000050  loss: 3.7780 (3.8582)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/engine.py:197: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Val:  [  0/137]  loss: 3.8961 (3.8961)  acc1: 0.0000 (0.0000)  acc5: 0.0000 (0.0000)  eta: 1:10:12  time: 30.7479  data: 30.7271  max mem: 1074
+Val:  [ 10/137]  loss: 3.8425 (3.8673)  acc1: 0.0000 (0.0000)  acc5: 0.0000 (0.0000)  eta: 0:05:56  time: 2.8046  data: 2.7935  max mem: 1074
+Val:  [ 20/137]  loss: 3.7128 (3.6544)  acc1: 0.0000 (0.1406)  acc5: 0.0000 (0.0000)  eta: 0:02:52  time: 0.0102  data: 0.0001  max mem: 1074
+Val:  [ 30/137]  loss: 3.6318 (3.7109)  acc1: 0.0469 (0.1205)  acc5: 0.0000 (0.0000)  eta: 0:01:47  time: 0.0096  data: 0.0001  max mem: 1074
+Val:  [ 40/137]  loss: 3.9367 (3.7635)  acc1: 0.0000 (0.0911)  acc5: 0.0000 (0.0000)  eta: 0:01:13  time: 0.0090  data: 0.0001  max mem: 1074
+Val:  [ 50/137]  loss: 3.8653 (3.7564)  acc1: 0.0000 (0.0999)  acc5: 0.0000 (0.0000)  eta: 0:00:53  time: 0.0091  data: 0.0001  max mem: 1074
+Val:  [ 60/137]  loss: 3.8047 (3.7763)  acc1: 0.0000 (0.0838)  acc5: 0.0000 (0.0000)  eta: 0:00:39  time: 0.0091  data: 0.0001  max mem: 1074
+Val:  [ 70/137]  loss: 3.8047 (3.7826)  acc1: 0.0000 (0.0748)  acc5: 0.0000 (0.0000)  eta: 0:00:29  time: 0.0090  data: 0.0001  max mem: 1074
+Val:  [ 80/137]  loss: 3.7162 (3.7659)  acc1: 0.0000 (0.0764)  acc5: 0.0000 (0.0000)  eta: 0:00:22  time: 0.0090  data: 0.0001  max mem: 1074
+Val:  [ 90/137]  loss: 3.6713 (3.7563)  acc1: 0.0156 (0.0730)  acc5: 0.0000 (0.0000)  eta: 0:00:16  time: 0.0092  data: 0.0001  max mem: 1074
+Val:  [100/137]  loss: 3.7669 (3.7629)  acc1: 0.0000 (0.0661)  acc5: 0.0000 (0.0000)  eta: 0:00:11  time: 0.0091  data: 0.0001  max mem: 1074
+Val:  [110/137]  loss: 3.7379 (3.7450)  acc1: 0.0000 (0.0711)  acc5: 0.0000 (0.0000)  eta: 0:00:07  time: 0.0092  data: 0.0001  max mem: 1074
+Val:  [120/137]  loss: 3.6949 (3.7450)  acc1: 0.0156 (0.0699)  acc5: 0.0000 (0.0000)  eta: 0:00:04  time: 0.0091  data: 0.0001  max mem: 1074
+Val:  [130/137]  loss: 3.7038 (3.7416)  acc1: 0.0469 (0.0761)  acc5: 0.0000 (0.0000)  eta: 0:00:01  time: 0.0090  data: 0.0001  max mem: 1074
+Val:  [136/137]  loss: 3.7038 (3.7377)  acc1: 0.0469 (0.0851)  acc5: 0.0000 (0.0000)  eta: 0:00:00  time: 0.0089  data: 0.0001  max mem: 1074
+Val: Total time: 0:00:32 (0.2407 s / it)
+* Acc@1 0.0851 Acc@5 0.0000 loss 3.7377
+* Pre 0.0758 Rec 0.0780 F1 0.0417
+Accuracy of the network on the 8763 test images: 0.0851
+F1 of the network on the 8763 test images: 0.0417
+Max Accuracy: 0.0851
+Max F1: 0.0417
+log_dir: ./logs/itc_blend60_masked_fold_C
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/engine.py:127: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch: [2]  [   0/1236]  lr: 0.000050  loss: 3.8061 (3.8061)  eta: 10:42:45  time: 31.2019  data: 31.1391  max mem: 1074
+Epoch: [2]  [  20/1236]  lr: 0.000050  loss: 3.7980 (3.7951)  eta: 0:30:51  time: 0.0384  data: 0.0001  max mem: 1074
+Epoch: [2]  [  40/1236]  lr: 0.000051  loss: 3.7950 (3.8014)  eta: 0:15:53  time: 0.0366  data: 0.0001  max mem: 1074
+Epoch: [2]  [  60/1236]  lr: 0.000051  loss: 3.7646 (3.7944)  eta: 0:10:44  time: 0.0368  data: 0.0001  max mem: 1074
+Epoch: [2]  [  80/1236]  lr: 0.000052  loss: 3.7478 (3.7829)  eta: 0:08:08  time: 0.0391  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 100/1236]  lr: 0.000052  loss: 3.8136 (3.7883)  eta: 0:06:33  time: 0.0398  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 120/1236]  lr: 0.000052  loss: 3.7637 (3.7866)  eta: 0:05:31  time: 0.0443  data: 0.0002  max mem: 1074
+Epoch: [2]  [ 140/1236]  lr: 0.000053  loss: 3.7872 (3.7863)  eta: 0:04:45  time: 0.0395  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 160/1236]  lr: 0.000053  loss: 3.7677 (3.7830)  eta: 0:04:10  time: 0.0402  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 180/1236]  lr: 0.000054  loss: 3.7737 (3.7826)  eta: 0:03:43  time: 0.0383  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 200/1236]  lr: 0.000054  loss: 3.7836 (3.7833)  eta: 0:03:21  time: 0.0391  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 220/1236]  lr: 0.000054  loss: 3.7318 (3.7792)  eta: 0:03:02  time: 0.0375  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 240/1236]  lr: 0.000055  loss: 3.7384 (3.7752)  eta: 0:02:48  time: 0.0429  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 260/1236]  lr: 0.000055  loss: 3.7567 (3.7727)  eta: 0:02:34  time: 0.0380  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 280/1236]  lr: 0.000056  loss: 3.7436 (3.7714)  eta: 0:02:23  time: 0.0364  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 300/1236]  lr: 0.000056  loss: 3.7195 (3.7694)  eta: 0:02:13  time: 0.0392  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 320/1236]  lr: 0.000056  loss: 3.7635 (3.7678)  eta: 0:02:04  time: 0.0414  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 340/1236]  lr: 0.000057  loss: 3.7101 (3.7653)  eta: 0:01:57  time: 0.0398  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 360/1236]  lr: 0.000057  loss: 3.7484 (3.7638)  eta: 0:01:49  time: 0.0383  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 380/1236]  lr: 0.000058  loss: 3.7575 (3.7636)  eta: 0:01:43  time: 0.0362  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 400/1236]  lr: 0.000058  loss: 3.7464 (3.7634)  eta: 0:01:37  time: 0.0352  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 420/1236]  lr: 0.000058  loss: 3.7141 (3.7614)  eta: 0:01:32  time: 0.0425  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 440/1236]  lr: 0.000059  loss: 3.7369 (3.7604)  eta: 0:01:27  time: 0.0365  data: 0.0003  max mem: 1074
+Epoch: [2]  [ 460/1236]  lr: 0.000059  loss: 3.6814 (3.7572)  eta: 0:01:22  time: 0.0426  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 480/1236]  lr: 0.000060  loss: 3.7105 (3.7559)  eta: 0:01:18  time: 0.0357  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 500/1236]  lr: 0.000060  loss: 3.7102 (3.7537)  eta: 0:01:14  time: 0.0398  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 520/1236]  lr: 0.000061  loss: 3.7490 (3.7534)  eta: 0:01:10  time: 0.0368  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 540/1236]  lr: 0.000061  loss: 3.7019 (3.7518)  eta: 0:01:07  time: 0.0400  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 560/1236]  lr: 0.000061  loss: 3.7270 (3.7509)  eta: 0:01:03  time: 0.0372  data: 0.0002  max mem: 1074
+Epoch: [2]  [ 580/1236]  lr: 0.000062  loss: 3.6792 (3.7490)  eta: 0:01:00  time: 0.0429  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 600/1236]  lr: 0.000062  loss: 3.7153 (3.7479)  eta: 0:00:57  time: 0.0405  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 620/1236]  lr: 0.000063  loss: 3.7021 (3.7461)  eta: 0:00:54  time: 0.0375  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 640/1236]  lr: 0.000063  loss: 3.6773 (3.7436)  eta: 0:00:52  time: 0.0392  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 660/1236]  lr: 0.000063  loss: 3.6626 (3.7419)  eta: 0:00:49  time: 0.0369  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 680/1236]  lr: 0.000064  loss: 3.6821 (3.7400)  eta: 0:00:47  time: 0.0385  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 700/1236]  lr: 0.000064  loss: 3.6545 (3.7376)  eta: 0:00:44  time: 0.0370  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 720/1236]  lr: 0.000065  loss: 3.7075 (3.7363)  eta: 0:00:42  time: 0.0421  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 740/1236]  lr: 0.000065  loss: 3.6607 (3.7349)  eta: 0:00:40  time: 0.0392  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 760/1236]  lr: 0.000065  loss: 3.6554 (3.7331)  eta: 0:00:38  time: 0.0366  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 780/1236]  lr: 0.000066  loss: 3.6260 (3.7308)  eta: 0:00:35  time: 0.0364  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 800/1236]  lr: 0.000066  loss: 3.6911 (3.7300)  eta: 0:00:33  time: 0.0392  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 820/1236]  lr: 0.000067  loss: 3.6845 (3.7285)  eta: 0:00:32  time: 0.0484  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 840/1236]  lr: 0.000067  loss: 3.6361 (3.7267)  eta: 0:00:30  time: 0.0369  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 860/1236]  lr: 0.000067  loss: 3.6682 (3.7253)  eta: 0:00:28  time: 0.0416  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 880/1236]  lr: 0.000068  loss: 3.6485 (3.7236)  eta: 0:00:26  time: 0.0447  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 900/1236]  lr: 0.000068  loss: 3.6107 (3.7211)  eta: 0:00:24  time: 0.0402  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 920/1236]  lr: 0.000069  loss: 3.6750 (3.7199)  eta: 0:00:23  time: 0.0384  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 940/1236]  lr: 0.000069  loss: 3.5944 (3.7172)  eta: 0:00:21  time: 0.0395  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 960/1236]  lr: 0.000069  loss: 3.6006 (3.7152)  eta: 0:00:19  time: 0.0373  data: 0.0001  max mem: 1074
+Epoch: [2]  [ 980/1236]  lr: 0.000070  loss: 3.7008 (3.7138)  eta: 0:00:18  time: 0.0399  data: 0.0001  max mem: 1074
+Epoch: [2]  [1000/1236]  lr: 0.000070  loss: 3.5951 (3.7120)  eta: 0:00:16  time: 0.0414  data: 0.0001  max mem: 1074
+Epoch: [2]  [1020/1236]  lr: 0.000071  loss: 3.6419 (3.7103)  eta: 0:00:15  time: 0.0419  data: 0.0001  max mem: 1074
+Epoch: [2]  [1040/1236]  lr: 0.000071  loss: 3.5823 (3.7080)  eta: 0:00:13  time: 0.0362  data: 0.0001  max mem: 1074
+Epoch: [2]  [1060/1236]  lr: 0.000071  loss: 3.5806 (3.7059)  eta: 0:00:12  time: 0.0364  data: 0.0001  max mem: 1074
+Epoch: [2]  [1080/1236]  lr: 0.000072  loss: 3.6028 (3.7042)  eta: 0:00:10  time: 0.0438  data: 0.0001  max mem: 1074
+Epoch: [2]  [1100/1236]  lr: 0.000072  loss: 3.5695 (3.7022)  eta: 0:00:09  time: 0.0362  data: 0.0001  max mem: 1074
+Epoch: [2]  [1120/1236]  lr: 0.000073  loss: 3.6257 (3.7008)  eta: 0:00:07  time: 0.0395  data: 0.0001  max mem: 1074
+Epoch: [2]  [1140/1236]  lr: 0.000073  loss: 3.6121 (3.6996)  eta: 0:00:06  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [2]  [1160/1236]  lr: 0.000073  loss: 3.6089 (3.6982)  eta: 0:00:05  time: 0.0380  data: 0.0001  max mem: 1074
+Epoch: [2]  [1180/1236]  lr: 0.000074  loss: 3.6215 (3.6969)  eta: 0:00:03  time: 0.0377  data: 0.0001  max mem: 1074
+Epoch: [2]  [1200/1236]  lr: 0.000074  loss: 3.5680 (3.6946)  eta: 0:00:02  time: 0.0381  data: 0.0001  max mem: 1074
+Epoch: [2]  [1220/1236]  lr: 0.000075  loss: 3.6352 (3.6936)  eta: 0:00:01  time: 0.0377  data: 0.0002  max mem: 1074
+Epoch: [2]  [1235/1236]  lr: 0.000075  loss: 3.6336 (3.6926)  eta: 0:00:00  time: 0.0403  data: 0.0001  max mem: 1074
+Epoch: [2] Total time: 0:01:20 (0.0652 s / it)
+Averaged stats: lr: 0.000075  loss: 3.6336 (3.6926)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/engine.py:197: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/sklearn/metrics/_classification.py:1731: UndefinedMetricWarning: Precision is ill-defined and being set to 0.0 in labels with no predicted samples. Use `zero_division` parameter to control this behavior.
+  _warn_prf(average, modifier, f"{metric.capitalize()} is", result.shape[0])
+Val:  [  0/137]  loss: 3.6716 (3.6716)  acc1: 0.0156 (0.0156)  acc5: 0.0000 (0.0000)  eta: 1:10:00  time: 30.6626  data: 30.6436  max mem: 1074
+Val:  [ 10/137]  loss: 3.7359 (3.7745)  acc1: 0.0156 (0.0270)  acc5: 0.0000 (0.0000)  eta: 0:05:55  time: 2.7967  data: 2.7859  max mem: 1074
+Val:  [ 20/137]  loss: 3.6140 (3.4607)  acc1: 0.0156 (0.1629)  acc5: 0.0000 (0.0000)  eta: 0:02:51  time: 0.0100  data: 0.0001  max mem: 1074
+Val:  [ 30/137]  loss: 3.5310 (3.5303)  acc1: 0.0781 (0.1290)  acc5: 0.0000 (0.0000)  eta: 0:01:46  time: 0.0099  data: 0.0001  max mem: 1074
+Val:  [ 40/137]  loss: 3.5731 (3.5459)  acc1: 0.0312 (0.1143)  acc5: 0.0000 (0.0000)  eta: 0:01:13  time: 0.0099  data: 0.0001  max mem: 1074
+Val:  [ 50/137]  loss: 3.5950 (3.5368)  acc1: 0.0156 (0.1302)  acc5: 0.0000 (0.0000)  eta: 0:00:53  time: 0.0100  data: 0.0001  max mem: 1074
+Val:  [ 60/137]  loss: 3.6845 (3.5589)  acc1: 0.0000 (0.1099)  acc5: 0.0000 (0.0000)  eta: 0:00:39  time: 0.0101  data: 0.0001  max mem: 1074
+Val:  [ 70/137]  loss: 3.6345 (3.5545)  acc1: 0.0000 (0.1015)  acc5: 0.0000 (0.0000)  eta: 0:00:29  time: 0.0100  data: 0.0001  max mem: 1074
+Val:  [ 80/137]  loss: 3.4763 (3.5169)  acc1: 0.0156 (0.1252)  acc5: 0.0000 (0.0000)  eta: 0:00:22  time: 0.0099  data: 0.0001  max mem: 1074
+Val:  [ 90/137]  loss: 3.6889 (3.5136)  acc1: 0.0312 (0.1168)  acc5: 0.0000 (0.0000)  eta: 0:00:16  time: 0.0101  data: 0.0001  max mem: 1074
+Val:  [100/137]  loss: 3.6890 (3.5269)  acc1: 0.0156 (0.1126)  acc5: 0.0000 (0.0000)  eta: 0:00:11  time: 0.0095  data: 0.0001  max mem: 1074
+Val:  [110/137]  loss: 3.3963 (3.4956)  acc1: 0.0469 (0.1316)  acc5: 0.0000 (0.0000)  eta: 0:00:07  time: 0.0091  data: 0.0001  max mem: 1074
+Val:  [120/137]  loss: 3.7556 (3.5225)  acc1: 0.0156 (0.1216)  acc5: 0.0000 (0.0000)  eta: 0:00:04  time: 0.0091  data: 0.0001  max mem: 1074
+Val:  [130/137]  loss: 3.7206 (3.5110)  acc1: 0.0156 (0.1273)  acc5: 0.0000 (0.0000)  eta: 0:00:01  time: 0.0092  data: 0.0001  max mem: 1074
+Val:  [136/137]  loss: 3.5868 (3.5104)  acc1: 0.0469 (0.1331)  acc5: 0.0000 (0.0000)  eta: 0:00:00  time: 0.0091  data: 0.0001  max mem: 1074
+Val: Total time: 0:00:32 (0.2404 s / it)
+* Acc@1 0.1331 Acc@5 0.0000 loss 3.5104
+* Pre 0.1328 Rec 0.1244 F1 0.0819
+Accuracy of the network on the 8763 test images: 0.1331
+F1 of the network on the 8763 test images: 0.0819
+Max Accuracy: 0.1331
+Max F1: 0.0819
+log_dir: ./logs/itc_blend60_masked_fold_C
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/Repository/PcapEncoder/code/YaTC/engine.py:127: FutureWarning: `torch.cuda.amp.autocast(args...)` is deprecated. Please use `torch.amp.autocast('cuda', args...)` instead.
+  with torch.cuda.amp.autocast():
+Epoch: [3]  [   0/1236]  lr: 0.000075  loss: 3.5574 (3.5574)  eta: 10:50:16  time: 31.5669  data: 31.5114  max mem: 1074
+Epoch: [3]  [  20/1236]  lr: 0.000075  loss: 3.6028 (3.5880)  eta: 0:31:11  time: 0.0379  data: 0.0001  max mem: 1074
+Epoch: [3]  [  40/1236]  lr: 0.000076  loss: 3.6093 (3.5877)  eta: 0:16:05  time: 0.0389  data: 0.0001  max mem: 1074
+Epoch: [3]  [  60/1236]  lr: 0.000076  loss: 3.5305 (3.5767)  eta: 0:10:54  time: 0.0411  data: 0.0001  max mem: 1074
+Epoch: [3]  [  80/1236]  lr: 0.000077  loss: 3.5516 (3.5739)  eta: 0:08:15  time: 0.0383  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 100/1236]  lr: 0.000077  loss: 3.5410 (3.5680)  eta: 0:06:39  time: 0.0392  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 120/1236]  lr: 0.000077  loss: 3.5653 (3.5684)  eta: 0:05:33  time: 0.0349  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 140/1236]  lr: 0.000078  loss: 3.5672 (3.5687)  eta: 0:04:46  time: 0.0354  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 160/1236]  lr: 0.000078  loss: 3.5748 (3.5674)  eta: 0:04:11  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 180/1236]  lr: 0.000079  loss: 3.5658 (3.5675)  eta: 0:03:44  time: 0.0413  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 200/1236]  lr: 0.000079  loss: 3.5581 (3.5645)  eta: 0:03:22  time: 0.0378  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 220/1236]  lr: 0.000079  loss: 3.5583 (3.5639)  eta: 0:03:04  time: 0.0398  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 240/1236]  lr: 0.000080  loss: 3.5132 (3.5621)  eta: 0:02:48  time: 0.0415  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 260/1236]  lr: 0.000080  loss: 3.5236 (3.5609)  eta: 0:02:36  time: 0.0500  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 280/1236]  lr: 0.000081  loss: 3.4966 (3.5575)  eta: 0:02:24  time: 0.0347  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 300/1236]  lr: 0.000081  loss: 3.4780 (3.5535)  eta: 0:02:14  time: 0.0401  data: 0.0004  max mem: 1074
+Epoch: [3]  [ 320/1236]  lr: 0.000081  loss: 3.4948 (3.5514)  eta: 0:02:06  time: 0.0442  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 340/1236]  lr: 0.000082  loss: 3.5358 (3.5500)  eta: 0:01:58  time: 0.0361  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 360/1236]  lr: 0.000082  loss: 3.5439 (3.5501)  eta: 0:01:50  time: 0.0356  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 380/1236]  lr: 0.000083  loss: 3.4835 (3.5468)  eta: 0:01:44  time: 0.0373  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 400/1236]  lr: 0.000083  loss: 3.4863 (3.5451)  eta: 0:01:38  time: 0.0377  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 420/1236]  lr: 0.000083  loss: 3.4426 (3.5413)  eta: 0:01:33  time: 0.0418  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 440/1236]  lr: 0.000084  loss: 3.4889 (3.5390)  eta: 0:01:28  time: 0.0438  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 460/1236]  lr: 0.000084  loss: 3.4550 (3.5364)  eta: 0:01:23  time: 0.0413  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 480/1236]  lr: 0.000085  loss: 3.5045 (3.5359)  eta: 0:01:19  time: 0.0370  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 500/1236]  lr: 0.000085  loss: 3.4713 (3.5340)  eta: 0:01:15  time: 0.0377  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 520/1236]  lr: 0.000086  loss: 3.5156 (3.5336)  eta: 0:01:11  time: 0.0421  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 540/1236]  lr: 0.000086  loss: 3.4594 (3.5323)  eta: 0:01:08  time: 0.0410  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 560/1236]  lr: 0.000086  loss: 3.4224 (3.5296)  eta: 0:01:04  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 580/1236]  lr: 0.000087  loss: 3.4702 (3.5283)  eta: 0:01:01  time: 0.0439  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 600/1236]  lr: 0.000087  loss: 3.4429 (3.5259)  eta: 0:00:58  time: 0.0400  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 620/1236]  lr: 0.000088  loss: 3.4557 (3.5238)  eta: 0:00:55  time: 0.0383  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 640/1236]  lr: 0.000088  loss: 3.4305 (3.5210)  eta: 0:00:53  time: 0.0443  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 660/1236]  lr: 0.000088  loss: 3.4758 (3.5206)  eta: 0:00:50  time: 0.0374  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 680/1236]  lr: 0.000089  loss: 3.4413 (3.5179)  eta: 0:00:47  time: 0.0384  data: 0.0002  max mem: 1074
+Epoch: [3]  [ 700/1236]  lr: 0.000089  loss: 3.4684 (3.5167)  eta: 0:00:45  time: 0.0364  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 720/1236]  lr: 0.000090  loss: 3.4691 (3.5156)  eta: 0:00:42  time: 0.0409  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 740/1236]  lr: 0.000090  loss: 3.4490 (3.5138)  eta: 0:00:40  time: 0.0433  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 760/1236]  lr: 0.000090  loss: 3.4348 (3.5116)  eta: 0:00:38  time: 0.0403  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 780/1236]  lr: 0.000091  loss: 3.4041 (3.5089)  eta: 0:00:36  time: 0.0394  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 800/1236]  lr: 0.000091  loss: 3.4439 (3.5072)  eta: 0:00:34  time: 0.0378  data: 0.0006  max mem: 1074
+Epoch: [3]  [ 820/1236]  lr: 0.000092  loss: 3.3767 (3.5038)  eta: 0:00:32  time: 0.0370  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 840/1236]  lr: 0.000092  loss: 3.3997 (3.5026)  eta: 0:00:30  time: 0.0371  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 860/1236]  lr: 0.000092  loss: 3.3841 (3.5000)  eta: 0:00:28  time: 0.0446  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 880/1236]  lr: 0.000093  loss: 3.3667 (3.4970)  eta: 0:00:26  time: 0.0378  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 900/1236]  lr: 0.000093  loss: 3.4372 (3.4949)  eta: 0:00:25  time: 0.0419  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 920/1236]  lr: 0.000094  loss: 3.4075 (3.4927)  eta: 0:00:23  time: 0.0389  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 940/1236]  lr: 0.000094  loss: 3.3654 (3.4905)  eta: 0:00:21  time: 0.0389  data: 0.0001  max mem: 1074
+Epoch: [3]  [ 960/1236]  lr: 0.000094  loss: 3.3599 (3.4878)  eta: 0:00:19  time: 0.0333  data: 0.0002  max mem: 1074
+Epoch: [3]  [ 980/1236]  lr: 0.000095  loss: 3.4392 (3.4870)  eta: 0:00:18  time: 0.0382  data: 0.0001  max mem: 1074
+Epoch: [3]  [1000/1236]  lr: 0.000095  loss: 3.3616 (3.4842)  eta: 0:00:16  time: 0.0503  data: 0.0001  max mem: 1074
+Epoch: [3]  [1020/1236]  lr: 0.000096  loss: 3.3969 (3.4823)  eta: 0:00:15  time: 0.0437  data: 0.0001  max mem: 1074
+Epoch: [3]  [1040/1236]  lr: 0.000096  loss: 3.3679 (3.4803)  eta: 0:00:13  time: 0.0409  data: 0.0001  max mem: 1074
+Epoch: [3]  [1060/1236]  lr: 0.000096  loss: 3.3731 (3.4786)  eta: 0:00:12  time: 0.0448  data: 0.0001  max mem: 1074
+Epoch: [3]  [1080/1236]  lr: 0.000097  loss: 3.3484 (3.4761)  eta: 0:00:10  time: 0.0389  data: 0.0001  max mem: 1074
+Epoch: [3]  [1100/1236]  lr: 0.000097  loss: 3.3680 (3.4746)  eta: 0:00:09  time: 0.0345  data: 0.0002  max mem: 1074
+Epoch: [3]  [1120/1236]  lr: 0.000098  loss: 3.3177 (3.4722)  eta: 0:00:07  time: 0.0374  data: 0.0001  max mem: 1074
+Epoch: [3]  [1140/1236]  lr: 0.000098  loss: 3.3187 (3.4698)  eta: 0:00:06  time: 0.0412  data: 0.0001  max mem: 1074
+Epoch: [3]  [1160/1236]  lr: 0.000098  loss: 3.3311 (3.4674)  eta: 0:00:05  time: 0.0367  data: 0.0001  max mem: 1074
+Epoch: [3]  [1180/1236]  lr: 0.000099  loss: 3.2951 (3.4646)  eta: 0:00:03  time: 0.0562  data: 0.0001  max mem: 1074
+Epoch: [3]  [1200/1236]  lr: 0.000099  loss: 3.4051 (3.4636)  eta: 0:00:02  time: 0.0386  data: 0.0001  max mem: 1074
+Epoch: [3]  [1220/1236]  lr: 0.000100  loss: 3.3313 (3.4618)  eta: 0:00:01  time: 0.0449  data: 0.0003  max mem: 1074
+Epoch: [3]  [1235/1236]  lr: 0.000100  loss: 3.3348 (3.4601)  eta: 0:00:00  time: 0.0411  data: 0.0001  max mem: 1074
+Epoch: [3] Total time: 0:01:22 (0.0664 s / it)
+Averaged stats: lr: 0.000100  loss: 3.3348 (3.4601)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)
+/root/miniconda3/envs/YaTC/lib/python3.10/site-packages/timm/models/layers/__init__.py:49: FutureWarning: Importing from timm.models.layers is deprecated, please import via timm.layers
+  warnings.warn(f"Importing from {__name__} is deprecated, please import via timm.layers", FutureWarning)

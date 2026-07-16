@@ -1,0 +1,142 @@
+2026-07-06 23:10:29,290 - INFO - flows_root=/root/Repository/TrafficCOGS/dataset/itcnet60/flows
+2026-07-06 23:10:29,290 - INFO - output_root=/root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60
+2026-07-06 23:10:29,292 - INFO - 53 common classes
+2026-07-06 23:10:29,686 - INFO - Scenario_A: 23588 sampled flows
+2026-07-06 23:10:29,933 - INFO - Scenario_B: 20902 sampled flows
+2026-07-06 23:10:30,509 - INFO - Scenario_C: 24512 sampled flows
+2026-07-06 23:10:30,908 - INFO - Scenario_D: 24678 sampled flows
+2026-07-06 23:10:31,195 - INFO - Scenario_E: 18130 sampled flows
+2026-07-06 23:10:31,397 - INFO - precomputing 111810 unique flow features with 12 workers
+2026-07-06 23:10:38,971 - INFO -   features 1000/111810
+2026-07-06 23:10:50,200 - INFO -   features 2000/111810
+2026-07-06 23:10:55,587 - INFO -   features 3000/111810
+2026-07-06 23:10:59,810 - INFO -   features 4000/111810
+2026-07-06 23:11:05,902 - INFO -   features 5000/111810
+2026-07-06 23:11:11,001 - INFO -   features 6000/111810
+2026-07-06 23:11:15,836 - INFO -   features 7000/111810
+2026-07-06 23:11:22,343 - INFO -   features 8000/111810
+2026-07-06 23:11:25,686 - INFO -   features 9000/111810
+2026-07-06 23:11:29,380 - INFO -   features 10000/111810
+2026-07-06 23:11:33,692 - INFO -   features 11000/111810
+2026-07-06 23:11:40,287 - INFO -   features 12000/111810
+2026-07-06 23:11:44,708 - INFO -   features 13000/111810
+2026-07-06 23:11:48,795 - INFO -   features 14000/111810
+2026-07-06 23:11:53,922 - INFO -   features 15000/111810
+2026-07-06 23:11:56,278 - INFO -   features 16000/111810
+2026-07-06 23:11:58,959 - INFO -   features 17000/111810
+2026-07-06 23:12:01,521 - INFO -   features 18000/111810
+2026-07-06 23:12:04,653 - INFO -   features 19000/111810
+2026-07-06 23:12:09,342 - INFO -   features 20000/111810
+2026-07-06 23:12:16,701 - INFO -   features 21000/111810
+2026-07-06 23:12:20,664 - INFO -   features 22000/111810
+2026-07-06 23:12:30,611 - INFO -   features 23000/111810
+2026-07-06 23:12:34,742 - INFO -   features 24000/111810
+2026-07-06 23:12:38,616 - INFO -   features 25000/111810
+2026-07-06 23:12:44,654 - INFO -   features 26000/111810
+2026-07-06 23:12:47,381 - INFO -   features 27000/111810
+2026-07-06 23:12:51,237 - INFO -   features 28000/111810
+2026-07-06 23:12:54,584 - INFO -   features 29000/111810
+2026-07-06 23:12:58,929 - INFO -   features 30000/111810
+2026-07-06 23:13:02,277 - INFO -   features 31000/111810
+2026-07-06 23:13:05,177 - INFO -   features 32000/111810
+2026-07-06 23:13:07,748 - INFO -   features 33000/111810
+2026-07-06 23:13:13,702 - INFO -   features 34000/111810
+2026-07-06 23:13:19,190 - INFO -   features 35000/111810
+2026-07-06 23:13:21,228 - INFO -   features 36000/111810
+2026-07-06 23:13:22,219 - INFO -   features 37000/111810
+2026-07-06 23:13:25,124 - INFO -   features 38000/111810
+2026-07-06 23:13:27,410 - INFO -   features 39000/111810
+2026-07-06 23:13:28,842 - INFO -   features 40000/111810
+2026-07-06 23:13:30,567 - INFO -   features 41000/111810
+2026-07-06 23:13:33,956 - INFO -   features 42000/111810
+2026-07-06 23:13:38,755 - INFO -   features 43000/111810
+2026-07-06 23:13:47,387 - INFO -   features 44000/111810
+2026-07-06 23:13:52,433 - INFO -   features 45000/111810
+2026-07-06 23:13:59,187 - INFO -   features 46000/111810
+2026-07-06 23:14:11,948 - INFO -   features 47000/111810
+2026-07-06 23:14:21,129 - INFO -   features 48000/111810
+2026-07-06 23:14:25,281 - INFO -   features 49000/111810
+2026-07-06 23:14:31,990 - INFO -   features 50000/111810
+2026-07-06 23:14:36,792 - INFO -   features 51000/111810
+2026-07-06 23:14:45,031 - INFO -   features 52000/111810
+2026-07-06 23:14:49,629 - INFO -   features 53000/111810
+2026-07-06 23:14:54,682 - INFO -   features 54000/111810
+2026-07-06 23:14:59,119 - INFO -   features 55000/111810
+2026-07-06 23:15:05,105 - INFO -   features 56000/111810
+2026-07-06 23:15:11,317 - INFO -   features 57000/111810
+2026-07-06 23:15:17,656 - INFO -   features 58000/111810
+2026-07-06 23:15:22,585 - INFO -   features 59000/111810
+2026-07-06 23:15:31,447 - INFO -   features 60000/111810
+2026-07-06 23:15:35,639 - INFO -   features 61000/111810
+2026-07-06 23:15:39,218 - INFO -   features 62000/111810
+2026-07-06 23:15:44,603 - INFO -   features 63000/111810
+2026-07-06 23:15:54,166 - INFO -   features 64000/111810
+2026-07-06 23:16:00,141 - INFO -   features 65000/111810
+2026-07-06 23:16:02,931 - INFO -   features 66000/111810
+2026-07-06 23:16:06,513 - INFO -   features 67000/111810
+2026-07-06 23:16:14,208 - INFO -   features 68000/111810
+2026-07-06 23:16:21,472 - INFO -   features 69000/111810
+2026-07-06 23:16:27,489 - INFO -   features 70000/111810
+2026-07-06 23:16:33,949 - INFO -   features 71000/111810
+2026-07-06 23:16:37,181 - INFO -   features 72000/111810
+2026-07-06 23:16:39,772 - INFO -   features 73000/111810
+2026-07-06 23:16:44,405 - INFO -   features 74000/111810
+2026-07-06 23:16:46,565 - INFO -   features 75000/111810
+2026-07-06 23:16:50,417 - INFO -   features 76000/111810
+2026-07-06 23:16:57,869 - INFO -   features 77000/111810
+2026-07-06 23:16:59,689 - INFO -   features 78000/111810
+2026-07-06 23:17:04,422 - INFO -   features 79000/111810
+2026-07-06 23:17:08,703 - INFO -   features 80000/111810
+2026-07-06 23:17:13,330 - INFO -   features 81000/111810
+2026-07-06 23:17:18,989 - INFO -   features 82000/111810
+2026-07-06 23:17:21,524 - INFO -   features 83000/111810
+2026-07-06 23:17:24,656 - INFO -   features 84000/111810
+2026-07-06 23:17:28,630 - INFO -   features 85000/111810
+2026-07-06 23:17:31,677 - INFO -   features 86000/111810
+2026-07-06 23:17:34,644 - INFO -   features 87000/111810
+2026-07-06 23:17:38,896 - INFO -   features 88000/111810
+2026-07-06 23:17:43,245 - INFO -   features 89000/111810
+2026-07-06 23:17:48,084 - INFO -   features 90000/111810
+2026-07-06 23:17:51,692 - INFO -   features 91000/111810
+2026-07-06 23:17:55,546 - INFO -   features 92000/111810
+2026-07-06 23:18:00,570 - INFO -   features 93000/111810
+2026-07-06 23:18:03,112 - INFO -   features 94000/111810
+2026-07-06 23:18:06,397 - INFO -   features 95000/111810
+2026-07-06 23:18:10,015 - INFO -   features 96000/111810
+2026-07-06 23:18:13,781 - INFO -   features 97000/111810
+2026-07-06 23:18:16,503 - INFO -   features 98000/111810
+2026-07-06 23:18:19,540 - INFO -   features 99000/111810
+2026-07-06 23:18:21,780 - INFO -   features 100000/111810
+2026-07-06 23:18:23,972 - INFO -   features 101000/111810
+2026-07-06 23:18:26,430 - INFO -   features 102000/111810
+2026-07-06 23:18:31,409 - INFO -   features 103000/111810
+2026-07-06 23:18:35,355 - INFO -   features 104000/111810
+2026-07-06 23:18:37,038 - INFO -   features 105000/111810
+2026-07-06 23:18:39,035 - INFO -   features 106000/111810
+2026-07-06 23:18:40,597 - INFO -   features 107000/111810
+2026-07-06 23:18:43,336 - INFO -   features 108000/111810
+2026-07-06 23:18:46,486 - INFO -   features 109000/111810
+2026-07-06 23:18:48,426 - INFO -   features 110000/111810
+2026-07-06 23:18:53,080 - INFO -   features 111000/111810
+2026-07-06 23:18:55,386 - INFO - feature cache ready: 111798/111810 non-empty
+2026-07-06 23:18:55,471 - INFO - fold_A: train=79419 val=8803 test=23588
+2026-07-06 23:18:57,198 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_A/train.tsv (79411 samples)
+2026-07-06 23:18:57,386 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_A/val.tsv (8801 samples)
+2026-07-06 23:18:57,924 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_A/test.tsv (23586 samples)
+2026-07-06 23:18:58,157 - INFO - fold_B: train=81833 val=9075 test=20902
+2026-07-06 23:18:59,940 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_B/train.tsv (81821 samples)
+2026-07-06 23:19:00,137 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_B/val.tsv (9075 samples)
+2026-07-06 23:19:00,580 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_B/test.tsv (20902 samples)
+2026-07-06 23:19:00,794 - INFO - fold_C: train=78585 val=8713 test=24512
+2026-07-06 23:19:02,509 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_C/train.tsv (78578 samples)
+2026-07-06 23:19:02,697 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_C/val.tsv (8712 samples)
+2026-07-06 23:19:03,478 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_C/test.tsv (24508 samples)
+2026-07-06 23:19:03,747 - INFO - fold_D: train=78438 val=8694 test=24678
+2026-07-06 23:19:05,443 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_D/train.tsv (78434 samples)
+2026-07-06 23:19:05,636 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_D/val.tsv (8692 samples)
+2026-07-06 23:19:06,167 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_D/test.tsv (24672 samples)
+2026-07-06 23:19:06,249 - INFO - fold_E: train=84324 val=9356 test=18130
+2026-07-06 23:19:08,196 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_E/train.tsv (84314 samples)
+2026-07-06 23:19:08,406 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_E/val.tsv (9354 samples)
+2026-07-06 23:19:08,766 - INFO -   -> /root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/fold_E/test.tsv (18130 samples)
+2026-07-06 23:19:08,774 - INFO - finished. meta=/root/Repository/Traffic/code/ET-BERT/datasets/ITC-Net-Blend-60/meta.json
